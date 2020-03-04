@@ -8,7 +8,7 @@ check($restbedrag);
 function check($restbedrag){
     echo !is_numeric($restbedrag);
     try{
-        if( !is_numeric($restbedrag) || $restbedrag == "" || $restbedrag == null) {
+        if(!is_numeric($restbedrag) || $restbedrag == "" || $restbedrag == null) {
             throw new Exception("Je hebt geen bedrag meegegeven dat omgewisseld kan worden");
         }
         if($restbedrag <= 0) {
